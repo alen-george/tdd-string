@@ -1,7 +1,3 @@
-class SumOfString
-
-  # def add(string)
-
-  # end
-
-end
+def add(string)
+    string.length
+  end
