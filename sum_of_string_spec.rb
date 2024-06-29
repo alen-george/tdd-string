@@ -16,6 +16,12 @@ describe 'Sum of integers from the String' do
 
     end
 
+    context "a double digit integer in string format" do
+      it 'return the digit' do
+        expect(add('81')).to eq 9
+      end
+
+    end
 
   end
 
