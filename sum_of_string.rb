@@ -1,3 +1,5 @@
 def add(string)
-    string.length
+    return 0 unless string.length
+
+    string.to_i
   end
