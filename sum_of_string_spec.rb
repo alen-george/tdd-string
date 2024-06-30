@@ -16,7 +16,7 @@ describe 'Sum of integers from the String' do
 
     end
 
-    context "a double digit integer in string format" do
+    context "a triple digit integer in string format" do
       it 'return the sum of digits' do
         expect(add('813')).to eq 12
       end
@@ -49,6 +49,11 @@ describe 'Sum of integers from the String' do
       end
     end
 
+    context "when negative numbers are in string" do
+      it 'should throw an exception with numbers' do
+        expect{add("//;\n1;-2;-4")}.to raise_error ArgumentError,"negative numbers are not allowed -2,-4"
+      end
+    end
 
   end
 
