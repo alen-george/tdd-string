@@ -34,6 +34,12 @@ describe 'Sum of integers from the String' do
         expect(add("8\n1,3")).to eq 12
       end
     end
+
+    context "with custom seperator provided in begining of the string" do
+      it 'returns the sum of digits' do
+        expect(add("//;\n1;2")).to eq 3
+      end
+    end
   end
 
 end
