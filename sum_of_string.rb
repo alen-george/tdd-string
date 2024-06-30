@@ -1,6 +1,10 @@
 def add(string)
     return 0 unless string.length
 
+    if string.include?("\n")
+      string.gsub!("\n", ",")
+    end
+
     if(string.length > 1)
       arr_format = string.split('')
       if arr_format.include?(',')

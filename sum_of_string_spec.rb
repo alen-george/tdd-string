@@ -28,6 +28,12 @@ describe 'Sum of integers from the String' do
         expect(add('8,1,3')).to eq 12
       end
     end
+
+    context "with newline character in between the digits" do
+      it 'returns the sum post handle of newline ' do
+        expect(add("8\n1,3")).to eq 12
+      end
+    end
   end
 
 end
