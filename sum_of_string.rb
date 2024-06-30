@@ -4,8 +4,9 @@ def add(string)
 
     seperator = ","
     if string.start_with?("//")
-      seperator = string[2]
-      string = string[string.index("\n")+1..]
+      newline_index = string.index("\n")
+      seperator = string[string.index("//")+1...newline_index]
+      string = string[newline_index+1..]
     end
 
 

@@ -43,7 +43,12 @@ describe 'Sum of integers from the String' do
       it 'returns sum with newline character included in between' do
         expect(add("//;\n1;2\n3")).to eq 6
       end
+
+      it 'should return sum with multi-character seperator ' do
+        expect(add("//d;\n1;2\n3")).to eq 6
+      end
     end
+
 
   end
 
