@@ -1,5 +1,7 @@
 def add(string)
     return 0 unless string.length
+
+
     seperator = ","
     if string.start_with?("//")
       seperator = string[2]
@@ -8,7 +10,7 @@ def add(string)
 
 
     if string.include?("\n")
-      string.gsub!("\n", ",")
+      string.gsub!("\n",seperator)
     end
 
     if(string.length > 1)

@@ -35,11 +35,16 @@ describe 'Sum of integers from the String' do
       end
     end
 
-    context "with custom seperator provided in begining of the string" do
-      it 'returns the sum of digits' do
+    context "with custom seperator provided in begining of the string in a specified format" do
+      it 'returns the sum of digits with custom seperator' do
         expect(add("//;\n1;2")).to eq 3
       end
+
+      it 'returns sum with newline character included in between' do
+        expect(add("//;\n1;2\n3")).to eq 6
+      end
     end
+
   end
 
 end
