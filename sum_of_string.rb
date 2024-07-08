@@ -1,5 +1,11 @@
-def add(string)
+class SumOfStrings
+  def initialize(str)
+    @str= str
+  end
+
+  def add
     seperator = ","
+    string = @str
     if string.start_with?("//")
       seperator = f_delimiter_and_truncate(string)
     end
@@ -23,10 +29,10 @@ def add(string)
 
 
   def f_delimiter_and_truncate(string)
-      newline_index = string.index("\n")
-      seperator = string[string.index("//")+2...newline_index]
-      string = string[newline_index+1..]
-      seperator
+    newline_index = string.index("\n")
+    seperator = string[string.index("//")+2...newline_index]
+    string = string[newline_index+1..]
+    seperator
   end
 
 
@@ -47,3 +53,7 @@ def add(string)
   rescue ArgumentError
     false
   end
+end
+
+
+
